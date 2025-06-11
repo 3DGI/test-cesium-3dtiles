@@ -21,7 +21,7 @@ Use `Cartesian3.fromDegrees(-75.6120945, 0, 400)` to set the location from a EPS
   
 - In the directory that contains the data (the `tileset.json`), run
   
-  `http-server -a localhost -p 8003 --cors=http://localhost:8080/`
+  `http-server -a localhost -p 8003 -c-1 --cors=http://localhost:8080/`
   
   This will start the server, under the address `localhost`, using port `8003`. The `cors` parameter will allow the Cesium to access the data from this locally running server.
   
