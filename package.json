@@ -25,7 +25,7 @@
     "start_gltf": "webpack serve --config webpack.config_gltf_structural_metadata.js --open"
   },
   "devDependencies": {
-    "cesium": "1.106.1",
+    "cesium": "1.130.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
