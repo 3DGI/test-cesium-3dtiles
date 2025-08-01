@@ -12,7 +12,7 @@ import {
     Terrain,
     ScreenSpaceEventHandler,
     Cesium3DTileFeature,
-    viewerCesium3DTilesInspectorMixin
+    viewerCesium3DTilesInspectorMixin, CesiumTerrainProvider
 } from "cesium";
 import "cesium/Build/Cesium/Widgets/widgets.css";
 import "../src/css/main.css"
@@ -22,7 +22,11 @@ Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4ODkzZ
 
 // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
 const viewer = new Viewer('cesiumContainer', {
-    terrain: Terrain.fromWorldTerrain(),
+    terrainProvider: await CesiumTerrainProvider.fromUrl(
+    'https://3d.kadaster.nl/3dtiles/ahn4', {
+      requestVertexNormals: true,
+      requestMetadata: false,
+  }),
     shadows: false,
     timeline: true,
     animation: false,
